@@ -44,7 +44,8 @@ defmodule EarmarkTagCloud.MixProject do
       {:excoveralls, "~> 0.14.2", only: :test},
       {:dialyxir, "~> 1.1.0", only: [:dev, :test], runtime: false},
       {:extractly, "~> 0.5.3", only: [:dev], runtime: false},
-      {:earmark, "~> 1.4.16-pre2"}
+      {:earmark, "~> 1.4.16-pre2"},
+      {:tag_cloud, "~> 0.1.0"},
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
     ]
@@ -67,7 +68,7 @@ defmodule EarmarkTagCloud.MixProject do
         "Apache 2 (see the file LICENSE for details)"
       ],
       links: %{
-        "GitHub" => "https://github.com/robertdober/tag_cloud"
+        "GitHub" => "https://github.com/robertdober/earmark_tag_cloud"
       }
     ]
   end

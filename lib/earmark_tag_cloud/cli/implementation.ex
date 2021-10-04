@@ -16,9 +16,9 @@ defmodule EarmarkTagCloud.Cli.Implementation do
   @args """
   usage:
 
-     tag_cloud --help
-     tag_cloud --version
-     tag_cloud [ options... <file> ]
+     earmark_tag_cloud --help
+     earmark_tag_cloud --version
+     earmark_tag_cloud [ options... <file> ]
 
   convert file from Markdown to HTML.using Earmark and allowing for EarmarkTagCloud annotations
 

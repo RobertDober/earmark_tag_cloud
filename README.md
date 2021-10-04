@@ -10,11 +10,11 @@ and are therefore tested
 ## EarmarkTagCloud
 
 
-[![CI](https://github.com/RobertDober/tag_cloud/actions/workflows/ci.yml/badge.svg)](https://github.com/RobertDober/tag_cloud/actions/workflows/ci.yml)
-[![Coverage Status](https://coveralls.io/repos/github/RobertDober/tag_cloud/badge.svg?branch=master)](https://coveralls.io/github/RobertDober/tag_cloud?branch=master)
-[![Hex.pm](https://img.shields.io/hexpm/v/tag_cloud.svg)](https://hex.pm/packages/tag_cloud)
-[![Hex.pm](https://img.shields.io/hexpm/dw/tag_cloud.svg)](https://hex.pm/packages/tag_cloud)
-[![Hex.pm](https://img.shields.io/hexpm/dt/tag_cloud.svg)](https://hex.pm/packages/tag_cloud)
+[![CI](https://github.com/RobertDober/earmark_tag_cloud/actions/workflows/ci.yml/badge.svg)](https://github.com/RobertDober/earmark_tag_cloud/actions/workflows/ci.yml)
+[![Coverage Status](https://coveralls.io/repos/github/RobertDober/earmark_tag_cloud/badge.svg?branch=master)](https://coveralls.io/github/RobertDober/earmark_tag_cloud?branch=master)
+[![Hex.pm](https://img.shields.io/hexpm/v/earmark_tag_cloud.svg)](https://hex.pm/packages/earmark_tag_cloud)
+[![Hex.pm](https://img.shields.io/hexpm/dw/earmark_tag_cloud.svg)](https://hex.pm/packages/earmark_tag_cloud)
+[![Hex.pm](https://img.shields.io/hexpm/dt/earmark_tag_cloud.svg)](https://hex.pm/packages/earmark_tag_cloud)
 
 - Make Tag Clouds from a simple DSL
 
@@ -145,9 +145,9 @@ A convenience method to access this library's version
 
 usage:
 
-    tag_cloud --help
-    tag_cloud --version
-    tag_cloud [ options... <file> ]
+    earmark_tag_cloud --help
+    earmark_tag_cloud --version
+    earmark_tag_cloud [ options... <file> ]
 
 convert file from Markdown to HTML.using Earmark and allowing for EarmarkTagCloud annotations
 

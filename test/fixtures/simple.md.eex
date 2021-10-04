@@ -1,4 +1,4 @@
-<%= tag_cloud.include_css %>
+<%= earmark_tag_cloud.include_css %>
 
 elixir %tc: 12 16 800
 
