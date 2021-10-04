@@ -1,7 +1,7 @@
-defmodule Test.TagCloud.Compiler.Color.GammaCorrectedTest do
+defmodule Test.EarmarkTagCloud.Compiler.Color.GammaCorrectedTest do
   use ExUnit.Case
 
-  import TagCloud.Compiler.Color, only: [gamma_corrected: 2, gamma_corrected_octet: 2]
+  import EarmarkTagCloud.Compiler.Color, only: [gamma_corrected: 2, gamma_corrected_octet: 2]
 
   describe "all scales of gray" do
     # <%= for {scale, color} <- 0..12 |> Enum.zip(["ffffff", "f5f5f5", "ebebeb", "e0e0e0", "d4d4d4", "c8c8c8", "bababa", "ababab", "9b9b9b", "888888", "717171", "525252", "000000"]) do %>

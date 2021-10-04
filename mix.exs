@@ -1,11 +1,11 @@
-defmodule TagCloud.MixProject do
+defmodule EarmarkTagCloud.MixProject do
   use Mix.Project
 
   @version "0.2.0-pre"
-  @url "https://github.com/robertdober/tag_cloud"
+  @url "https://github.com/robertdober/earmark_tag_cloud"
 
   @description """
-  Eilxir Tools to create Tag clouds - Integration with Earmark Annotations - Independent Library Functions - Gamma correction for grey scales - CSS files
+  Eilxir Tools to create Tag clouds - Integration of TagCloud with Earmark Annotations
   """
 
 
@@ -15,7 +15,7 @@ defmodule TagCloud.MixProject do
       version: @version,
       elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
-      escript: [main_module: TagCloud.Cli],
+      escript: [main_module: EarmarkTagCloud.Cli],
 
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -76,7 +76,7 @@ defmodule TagCloud.MixProject do
   @prerequisites """
   run `mix escript.install hex ex_doc` and adjust `PATH` accordingly
   """
-  @modulename "TagCloud"
+  @modulename "EarmarkTagCloud"
   defp build_docs(_) do
     Mix.Task.run("compile")
     ex_doc = Path.join(Mix.path_for(:escripts), "ex_doc")

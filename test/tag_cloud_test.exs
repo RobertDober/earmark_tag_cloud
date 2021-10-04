@@ -1,5 +1,5 @@
-defmodule Test.TagCloudTest do
+defmodule Test.EarmarkTagCloudTest do
   use ExUnit.Case
 
-  doctest TagCloud, import: true
+  doctest EarmarkTagCloud, import: true
 end

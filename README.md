@@ -7,7 +7,7 @@ and any changes you make in this file will most likely be lost
 All doctests in this README have been extracted from the code by [Extractly](https://github.com/RobertDober/extractly)
 and are therefore tested
 
-## TagCloud
+## EarmarkTagCloud
 
 
 [![CI](https://github.com/RobertDober/tag_cloud/actions/workflows/ci.yml/badge.svg)](https://github.com/RobertDober/tag_cloud/actions/workflows/ci.yml)
@@ -27,10 +27,10 @@ and are therefore tested
 
 - Elixir Tools to create Tag clouds
 
-  - `TagCloud.Compiler.dsl_to_attributes`
+  - `EarmarkTagCloud.Compiler.dsl_to_attributes`
 
 ```elixir
-      iex(1)> TagCloud.Compiler.dsl_to_attributes("12 16 100")
+      iex(1)> EarmarkTagCloud.Compiler.dsl_to_attributes("12 16 100")
       [{"style", "color: #000000; font-size: 16pt; font-weight: 100;"}]
 ```
 
@@ -132,7 +132,7 @@ and are therefore tested
 ```
 
 
-## TagCloud.version/0
+## EarmarkTagCloud.version/0
 
 A convenience method to access this library's version
 
@@ -141,7 +141,7 @@ A convenience method to access this library's version
 ```
 
 
-### TagCloud.Cli
+### EarmarkTagCloud.Cli
 
 usage:
 
@@ -149,7 +149,7 @@ usage:
     tag_cloud --version
     tag_cloud [ options... <file> ]
 
-convert file from Markdown to HTML.using Earmark and allowing for TagCloud annotations
+convert file from Markdown to HTML.using Earmark and allowing for EarmarkTagCloud annotations
 
 cond do
 
@@ -159,7 +159,7 @@ cond do
 
 
 
-### TagCloud.version/0
+### EarmarkTagCloud.version/0
 
 A convenience method to access this library's version
 
@@ -168,12 +168,12 @@ A convenience method to access this library's version
 ```
 
 
-### TagCloud.Compiler
+### EarmarkTagCloud.Compiler
 
 Compiles tag cloud specifications of the form
 `color font_size font_weight color` to corresponding HTML attributes
 
-#### TagCloud.Compiler.dsl_to_attributes/1
+#### EarmarkTagCloud.Compiler.dsl_to_attributes/1
 
 Implements the compilation
 
@@ -203,7 +203,7 @@ The complete list can be found [here](https://en.wikipedia.org/wiki/Web_colors#E
 
 
 
-## TagCloud.EarmarkAst
+## EarmarkTagCloud.EarmarkAst
 
 An Earmark AST processor which will change annotated tag cloud paragraphs into spans with the necessary attributes
 

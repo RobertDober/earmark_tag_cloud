@@ -1,5 +1,5 @@
-defmodule Test.TagCloud.Compiler.ColorTest do
+defmodule Test.EarmarkTagCloud.Compiler.ColorTest do
   use ExUnit.Case
 
-  doctest TagCloud.Compiler.Color, import: true
+  doctest EarmarkTagCloud.Compiler.Color, import: true
 end

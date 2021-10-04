@@ -1,7 +1,7 @@
-defmodule Test.TagCloud.Cli.ImplementationTest do
+defmodule Test.EarmarkTagCloud.Cli.ImplementationTest do
   use ExUnit.Case
 
-  import TagCloud.Cli.Implementation
+  import EarmarkTagCloud.Cli.Implementation
 
   describe "empty" do
     test "empty" do
@@ -17,7 +17,7 @@ defmodule Test.TagCloud.Cli.ImplementationTest do
        tag_cloud --version
        tag_cloud [ options... <file> ]
 
-    convert file from Markdown to HTML.using Earmark and allowing for TagCloud annotations
+    convert file from Markdown to HTML.using Earmark and allowing for EarmarkTagCloud annotations
 
        where options can be any of:
 
@@ -43,7 +43,7 @@ defmodule Test.TagCloud.Cli.ImplementationTest do
     test "simple.md" do
       file = "test/fixtures/simple.md"
       result = run([file])
-      expected = {:stdio, TagCloud.render_html(File.read!(file))}
+      expected = {:stdio, EarmarkTagCloud.render_html(File.read!(file))}
       assert result == expected
     end
 

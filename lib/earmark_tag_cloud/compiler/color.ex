@@ -1,5 +1,5 @@
-defmodule TagCloud.Compiler.Color do
-  use TagCloud.Types
+defmodule EarmarkTagCloud.Compiler.Color do
+  use EarmarkTagCloud.Types
 
   @type scaled_color_t :: {maybe(integer()), binary()}
 
@@ -198,7 +198,7 @@ defmodule TagCloud.Compiler.Color do
     try do
       _parse_color!(color)
     rescue
-      KeyError -> raise TagCloud.Error, "illegal color spec #{color}"
+      KeyError -> raise EarmarkTagCloud.Error, "illegal color spec #{color}"
     end
   end
 
@@ -213,7 +213,7 @@ defmodule TagCloud.Compiler.Color do
     match = Regex.run(@simple_scale_rgx, color) -> _simple_scale(match)
     match = Regex.run(@named_color_rgx, color) -> _named_scale(match)
     match = Regex.run(@hex_scale_rgx, color) -> {match |> Enum.at(1) |> String.to_integer,  match |> Enum.at(2)}
-    true -> raise TagCloud.Error, "illegal color spec #{color}"
+    true -> raise EarmarkTagCloud.Error, "illegal color spec #{color}"
     end
   end
 

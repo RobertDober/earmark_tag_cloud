@@ -1,7 +1,7 @@
-defmodule Test.TagCloud.Compiler.Color.ParseColorTest do
+defmodule Test.EarmarkTagCloud.Compiler.Color.ParseColorTest do
   use ExUnit.Case
 
-  import TagCloud.Compiler.Color, only: [parse_color: 1]
+  import EarmarkTagCloud.Compiler.Color, only: [parse_color: 1]
 
   describe "gray scales" do
     test "0" do
@@ -350,50 +350,50 @@ defmodule Test.TagCloud.Compiler.Color.ParseColorTest do
   describe "illegal spex" do
     # <%= for illegal <- ["", "23/", "#abcdeg", "#aaaaa", "#bbbbbbb", "012345", "1/010203"] do %>
     # test "<%= illegal %>" do
-    #   assert_raise TagCloud.Error, fn ->
+    #   assert_raise EarmarkTagCloud.Error, fn ->
     #     parse_color("<%= illegal %>")
     #   end
     # end
     # <% end %>
 
     test "" do
-      assert_raise TagCloud.Error, fn ->
+      assert_raise EarmarkTagCloud.Error, fn ->
         parse_color("")
       end
     end
 
     test "23/" do
-      assert_raise TagCloud.Error, fn ->
+      assert_raise EarmarkTagCloud.Error, fn ->
         parse_color("23/")
       end
     end
 
     test "#abcdeg" do
-      assert_raise TagCloud.Error, fn ->
+      assert_raise EarmarkTagCloud.Error, fn ->
         parse_color("#abcdeg")
       end
     end
 
     test "#aaaaa" do
-      assert_raise TagCloud.Error, fn ->
+      assert_raise EarmarkTagCloud.Error, fn ->
         parse_color("#aaaaa")
       end
     end
 
     test "#bbbbbbb" do
-      assert_raise TagCloud.Error, fn ->
+      assert_raise EarmarkTagCloud.Error, fn ->
         parse_color("#bbbbbbb")
       end
     end
 
     test "012345" do
-      assert_raise TagCloud.Error, fn ->
+      assert_raise EarmarkTagCloud.Error, fn ->
         parse_color("012345")
       end
     end
 
     test "1/010203" do
-      assert_raise TagCloud.Error, fn ->
+      assert_raise EarmarkTagCloud.Error, fn ->
         parse_color("1/010203")
       end
     end

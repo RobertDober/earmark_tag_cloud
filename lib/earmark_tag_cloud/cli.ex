@@ -1,4 +1,4 @@
-defmodule TagCloud.Cli do
+defmodule EarmarkTagCloud.Cli do
   @usage """
   usage:
 
@@ -6,7 +6,7 @@ defmodule TagCloud.Cli do
       tag_cloud --version
       tag_cloud [ options... <file> ]
 
-  convert file from Markdown to HTML.using Earmark and allowing for TagCloud annotations
+  convert file from Markdown to HTML.using Earmark and allowing for EarmarkTagCloud annotations
 
   cond do
 
@@ -20,7 +20,7 @@ defmodule TagCloud.Cli do
 
   def main(argv) do
     argv
-    |> TagCloud.Cli.Implementation.run()
+    |> EarmarkTagCloud.Cli.Implementation.run()
     |> output()
   end
 

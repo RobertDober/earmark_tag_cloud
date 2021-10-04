@@ -1,5 +1,5 @@
-defmodule TagCloud.EarmarkAst do
-  use TagCloud.Types
+defmodule EarmarkTagCloud.EarmarkAst do
+  use EarmarkTagCloud.Types
   @moduledoc ~S"""
   An Earmark AST processor which will change annotated tag cloud paragraphs into spans with the necessary attributes
 
@@ -53,7 +53,7 @@ defmodule TagCloud.EarmarkAst do
 
   @spec annotate_node(ast_node(), binary()) :: ast_node()
   defp annotate_node({_, atts, content, meta}, tag_cloud_description) do
-    atts_ = TagCloud.dsl_to_attributes(tag_cloud_description)
+    atts_ = EarmarkTagCloud.dsl_to_attributes(tag_cloud_description)
     {"span", Earmark.AstTools.merge_atts(atts, atts_), content, meta}
   end
 end

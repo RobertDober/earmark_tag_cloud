@@ -1,4 +1,4 @@
-defmodule TagCloud do
+defmodule EarmarkTagCloud do
   @moduledoc ~S"""
 
   [![CI](https://github.com/RobertDober/tag_cloud/actions/workflows/ci.yml/badge.svg)](https://github.com/RobertDober/tag_cloud/actions/workflows/ci.yml)
@@ -18,9 +18,9 @@ defmodule TagCloud do
 
   - Elixir Tools to create Tag clouds
 
-    - `TagCloud.Compiler.dsl_to_attributes`
+    - `EarmarkTagCloud.Compiler.dsl_to_attributes`
 
-        iex(1)> TagCloud.Compiler.dsl_to_attributes("12 16 100")
+        iex(1)> EarmarkTagCloud.Compiler.dsl_to_attributes("12 16 100")
         [{"style", "color: #000000; font-size: 16pt; font-weight: 100;"}]
 
   - Independent Library Functions
@@ -111,13 +111,13 @@ defmodule TagCloud do
   """
 
 
-  defdelegate dsl_to_attributes(description), to: TagCloud.Compiler
+  defdelegate dsl_to_attributes(description), to: EarmarkTagCloud.Compiler
 
-  defdelegate make_tag_clouds(ast, options \\ [annotation: "%tc:"]), to: TagCloud.EarmarkAst
+  defdelegate make_tag_clouds(ast, options \\ [annotation: "%tc:"]), to: EarmarkTagCloud.EarmarkAst
 
-  defdelegate render_ast(input), to: TagCloud.EarmarkAst
+  defdelegate render_ast(input), to: EarmarkTagCloud.EarmarkAst
 
-  defdelegate render_html(input), to: TagCloud.EarmarkAst
+  defdelegate render_html(input), to: EarmarkTagCloud.EarmarkAst
 
   @doc """
   A convenience method to access this library's version
@@ -127,7 +127,7 @@ defmodule TagCloud do
   @spec version :: binary()
   def version do
     :application.ensure_started(:tag_cloud)
-    with {:ok, version} = :application.get_key(:tag_cloud, :vsn), do: to_string(version)
+    with {:ok, version} = :application.get_key(:earmark_tag_cloud, :vsn), do: to_string(version)
   end
 end
 #  SPDX-License-Identifier: Apache-2.0

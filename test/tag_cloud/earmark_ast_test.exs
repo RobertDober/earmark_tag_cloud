@@ -1,9 +1,9 @@
-defmodule Test.TagCloud.EarmarkAstTest do
+defmodule Test.EarmarkTagCloud.EarmarkAstTest do
   use ExUnit.Case
 
-  doctest TagCloud.EarmarkAst, import: true
+  doctest EarmarkTagCloud.EarmarkAst, import: true
 
-  import TagCloud.EarmarkAst
+  import EarmarkTagCloud.EarmarkAst
 
   describe "different annotations" do
     test "debugging doctest" do

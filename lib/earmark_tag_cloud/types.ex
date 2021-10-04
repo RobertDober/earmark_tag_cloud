@@ -1,4 +1,4 @@
-defmodule TagCloud.Types do
+defmodule EarmarkTagCloud.Types do
   defmacro __using__(_opts \\ []) do
     quote do
       @type ast :: Earmark.ast

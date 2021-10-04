@@ -1,4 +1,4 @@
-defmodule TagCloud.Error do
+defmodule EarmarkTagCloud.Error do
 
   @moduledoc false
 

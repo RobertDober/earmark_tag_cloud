@@ -1,7 +1,7 @@
-defmodule Test.TagCloud.Compiler.DslToAttributesTest do
+defmodule Test.EarmarkTagCloud.Compiler.DslToAttributesTest do
   use ExUnit.Case
 
-  import TagCloud.Compiler, only: [dsl_to_attributes: 1]
+  import EarmarkTagCloud.Compiler, only: [dsl_to_attributes: 1]
 
   describe "colors: gamma corrected gray scales" do
     test "0" do

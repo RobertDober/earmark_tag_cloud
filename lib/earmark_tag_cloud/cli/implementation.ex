@@ -1,5 +1,5 @@
-defmodule TagCloud.Cli.Implementation do
-  use TagCloud.Types
+defmodule EarmarkTagCloud.Cli.Implementation do
+  use EarmarkTagCloud.Types
 
   @type output_tuple :: {:stderr, binary()} | {:stdio, binary()}
   @typep parse_result :: :help | :version | output_tuple() | binary()
@@ -20,7 +20,7 @@ defmodule TagCloud.Cli.Implementation do
      tag_cloud --version
      tag_cloud [ options... <file> ]
 
-  convert file from Markdown to HTML.using Earmark and allowing for TagCloud annotations
+  convert file from Markdown to HTML.using Earmark and allowing for EarmarkTagCloud annotations
 
      where options can be any of:
 
@@ -48,7 +48,7 @@ defmodule TagCloud.Cli.Implementation do
   defp _process(what)
   defp _process({_, _}=output), do: output
   defp _process(:help), do: {:stdio, @args}
-  defp _process(:version), do: {:stdio, TagCloud.version}
+  defp _process(:version), do: {:stdio, EarmarkTagCloud.version}
   defp _process(file), do: _process_file(file)
 
 
@@ -75,7 +75,7 @@ defmodule TagCloud.Cli.Implementation do
       |> File.stream!([:utf8], :line)
       |> Enum.to_list
       |> Earmark.as_ast!(annotations: @annotation)
-      |> TagCloud.make_tag_clouds
+      |> EarmarkTagCloud.make_tag_clouds
       |> Earmark.transform
   end
 end

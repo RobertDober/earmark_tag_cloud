@@ -1,7 +1,7 @@
-defmodule TagCloud.Compiler do
-  use TagCloud.Types
+defmodule EarmarkTagCloud.Compiler do
+  use EarmarkTagCloud.Types
 
-  alias TagCloud.Compiler.Color
+  alias EarmarkTagCloud.Compiler.Color
 
   @moduledoc """
   Compiles tag cloud specifications of the form
