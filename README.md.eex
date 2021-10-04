@@ -9,8 +9,6 @@ and are therefore tested
 
 <%= xtra.functiondoc :all, module: "EarmarkTagCloud", headline: 3, wrap_code_blocks: "elixir" %>
 
-<%= xtra.moduledoc "EarmarkTagCloud.Compiler", inlcude: :all, headline: 3, wrap_code_blocks: "elixir" %>
-<%= xtra.functiondoc :all, module: "EarmarkTagCloud.Compiler", headline: 4, wrap_code_blocks: "elixir" %>
 
 <%= xtra.moduledoc "EarmarkTagCloud.EarmarkAst", inlcude: :all, headline: 2, wrap_code_blocks: "elixir" %>
 

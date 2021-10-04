@@ -16,7 +16,7 @@ and are therefore tested
 [![Hex.pm](https://img.shields.io/hexpm/dw/earmark_tag_cloud.svg)](https://hex.pm/packages/earmark_tag_cloud)
 [![Hex.pm](https://img.shields.io/hexpm/dt/earmark_tag_cloud.svg)](https://hex.pm/packages/earmark_tag_cloud)
 
-- Make Tag Clouds from a simple DSL
+- Make Tag Clouds from a simple DSL added as annotations to paragraphs
 
     e.g.
     ```
@@ -27,16 +27,10 @@ and are therefore tested
 
 - Elixir Tools to create Tag clouds
 
-  - `EarmarkTagCloud.Compiler.dsl_to_attributes`
-
 ```elixir
-      iex(1)> EarmarkTagCloud.Compiler.dsl_to_attributes("12 16 100")
+      iex(1)> dsl_to_attributes("12 16 100")
       [{"style", "color: #000000; font-size: 16pt; font-weight: 100;"}]
 ```
-
-- Independent Library Functions
-
-- Gamma correction for scaled colors
 
 - Earmark Integration (needs v1.4.16-pre2 or greater)
 
@@ -165,40 +159,6 @@ A convenience method to access this library's version
 
 ```elixir
     iex(8)> {:ok, _} = Version.parse(version())
-```
-
-
-### EarmarkTagCloud.Compiler
-
-Compiles tag cloud specifications of the form
-`color font_size font_weight color` to corresponding HTML attributes
-
-#### EarmarkTagCloud.Compiler.dsl_to_attributes/1
-
-Implements the compilation
-
-### Gray Scale
-
-```elixir
-    iex(1)> dsl_to_attributes("10 12 100")
-    [{"style", "color: #717171; font-size: 12pt; font-weight: 100;"}]
-```
-
-### Scale on Predefined Colors
-
-All 140 color names defined by the CSS standard are supported.
-The complete list can be found [here](https://en.wikipedia.org/wiki/Web_colors#Extended_colors)
-
-```elixir
-    iex(2)> dsl_to_attributes("8/fuchsia 3em 800")
-    [{"style", "color: #ff9bff; font-size: 3em; font-weight: 800;"}]
-```
-
-### Just use your own color
-
-```elixir
-    iex(3)> dsl_to_attributes("#cafe00")
-    [{"style", "color: #cafe00;"}]
 ```
 
 
